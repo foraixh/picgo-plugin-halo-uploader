@@ -154,6 +154,7 @@ module.exports = (ctx) => {
     const loginOptions = (url, username, password) => {
         return {
             method: 'POST',
+            strictSSL: false,
             uri: url + '/api/admin/login',
             headers: {
                 contentType: 'application/json',
@@ -170,6 +171,7 @@ module.exports = (ctx) => {
     const uploadOptions = (url, accessToken, image) => {
             return {
                 method: 'POST',
+                strictSSL: false,
                 uri: url + '/api/admin/attachments/upload',
                 headers: {
                     contentType: 'multipart/form-data',

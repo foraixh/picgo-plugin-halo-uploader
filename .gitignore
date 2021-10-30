@@ -4,3 +4,6 @@ dist/
 yarn-error.log
 temp.js
 package-lock.json
+
+/src/*.png
+/src/*.jpg

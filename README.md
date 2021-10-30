@@ -18,15 +18,19 @@
 
 在picgo - 2.3.0及以上版本，可在图形化页面选择项目所在文件夹进行插件的安装。
 
-![image-20211024103620012](https://www.foraixh.xyz/upload/2021/10/202110241036618-af5c3c0616164c5fa452a3855efc22e2.png)
+![image-20211024103620012](https://www.foraixh.fun/upload/2021/10/202110241036618-af5c3c0616164c5fa452a3855efc22e2.png)
 
 ## 配置
 
 依次配置halo博客地址、halo后台用户名和密码即可。accessToken不需要配置，会自动填充和更新。
 
-![image-20211024102334486](https://www.foraixh.xyz/upload/2021/10/202110241025567-e40d4630396d4fe29e2edf9677b8ff7e.png)
+![image-20211030112513601](https://www.foraixh.fun/upload/2021/10/202110301125667-067775f419114569b1fe13753ee02165.png)
 
 ## 更新日志
+
+### V1.0.1
+
+- 解决"node.js request请求url错误:证书已过期 Error: certificate has expired"问题，构造请求的时候增加"strictSSL: false"
 
 ### V1.0.0
 

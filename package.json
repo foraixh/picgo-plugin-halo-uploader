@@ -1,6 +1,6 @@
 {
     "name": "picgo-plugin-halo-uploader",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "halo-uploader",
     "main": "src/index.js",
     "publishConfig": {
