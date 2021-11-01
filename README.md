@@ -6,6 +6,8 @@
 
 打开 [PicGo](https://github.com/Molunerfinn/PicGo) 详细窗口，选择**插件设置**，搜索**halo**安装，然后重启应用即可。
 
+![image-20211101103421797](https://www.foraixh.fun/upload/2021/11/202111011034387-82edc0e73526440d9f858708844c7ac7.png)
+
 ## 离线安装
 
 克隆该项目，复制项目到 以下目录：
