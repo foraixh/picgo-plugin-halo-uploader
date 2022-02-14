@@ -1,6 +1,6 @@
 {
     "name": "picgo-plugin-halo-uploader",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "description": "halo-uploader",
     "main": "src/index.js",
     "publishConfig": {
@@ -14,6 +14,8 @@
         "major": "npm version major && git push origin master && git push origin --tags"
     },
     "keywords": [
+        "halo",
+        "halo-uploader",
         "picgo",
         "picgo-plugin"
     ],

@@ -30,6 +30,10 @@
 
 ## 更新日志
 
+### V1.0.2
+
+- 解决accessToken过期后不会重新获取Token的问题
+
 ### V1.0.1
 
 - 解决"node.js request请求url错误:证书已过期 Error: certificate has expired"问题，构造请求的时候增加"strictSSL: false"

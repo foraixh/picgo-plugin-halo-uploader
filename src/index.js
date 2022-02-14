@@ -60,14 +60,19 @@ module.exports = (ctx) => {
             const haloUrl = userConfig.haloUrl
 
             // 文件上传
-            const uploadConfig = uploadOptions(haloUrl, accessToken, fs.createReadStream(filePath))
-            let uploadBody = await ctx.request(uploadConfig)
-            uploadBody = JSON.parse(uploadBody);
-            // 如果token过期，则重新登陆获取token
-            if (uploadBody.status === 401) {
-                accessToken = await getTokenByLogin(ctx)
-                uploadBody = await ctx.request(uploadConfig)
+            const uploadConfig = uploadOptions(haloUrl, accessToken, fs.createReadStream(filePath));
+            var uploadBody;
+            try {
+                uploadBody = await ctx.request(uploadConfig);
                 uploadBody = JSON.parse(uploadBody);
+            } catch (err) {
+                // 如果token过期，则重新登陆获取token
+                accessToken = await getTokenByLogin(ctx)
+                ctx.saveConfig({ 'picBed.halo-uploader.accessToken': accessToken })
+                uploadBody = await ctx.request(uploadOptions(haloUrl, accessToken, fs.createReadStream(filePath)))
+                uploadBody = JSON.parse(uploadBody);
+                // ctx.log.info("重新获取token成功：" + accessToken);
+                // ctx.log.info(uploadBody);
             }
             if (uploadBody.status === 200) {
                 fs.unlink(filePath, () => {})
